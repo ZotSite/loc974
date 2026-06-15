@@ -8,8 +8,9 @@
 
   /* ===== HERO : SCROLL PINCÉ + ZOOM PARALLAX ===== */
   const heroSection    = document.querySelector('.hero');
-  const heroImg        = document.querySelector('.hero__img');
-  const heroOverlay    = document.querySelector('.hero__overlay');
+  const heroImg1       = document.querySelector('.hero__img--1');
+  const heroImg2       = document.querySelector('.hero__img--2');
+  const heroImg3       = document.querySelector('.hero__img--3');
   const heroScrollHint = document.querySelector('.hero__scroll-hint');
   const heroEls        = document.querySelectorAll('.js-hero-el');
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -23,15 +24,10 @@
       const viewportH = window.innerHeight;
       const ratio     = Math.max(0, Math.min(1, scrollY / (heroH - viewportH)));
 
-      /* Overlay : transparent → plein (image passe de lumineuse à sombre) */
-      if (heroOverlay) {
-        heroOverlay.style.opacity = Math.min(ratio / 0.78, 1).toFixed(3);
-      }
-
-      /* Image : zoom progressif 1.0 → 1.15 */
-      if (heroImg) {
-        heroImg.style.transform = `scale(${1 + ratio * 0.15})`;
-      }
+      /* 4 images, 3 transitions d'1/3 chacune */
+      if (heroImg2) heroImg2.style.opacity = Math.max(0, 1 - ratio * 3).toFixed(3);
+      if (heroImg1) heroImg1.style.opacity = Math.max(0, 1 - (ratio - 1/3) * 3).toFixed(3);
+      if (heroImg3) heroImg3.style.opacity = Math.max(0, 1 - (ratio - 2/3) * 3).toFixed(3);
 
       /* Révèle chaque élément selon son seuil */
       heroEls.forEach(el => {
