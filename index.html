@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RoadTrip Réunion — Location de Dacia Duster équipés tente de toit. Explorez La Réunion à votre rythme, en toute liberté." />
+  <meta property="og:title" content="RoadTrip Réunion — L'aventure dort où vous décidez" />
+  <meta property="og:description" content="Louez un 4x4 avec tente de toit et partez découvrir les plus beaux spots de l'île." />
+  <meta property="og:type" content="website" />
+  <title>RoadTrip Réunion — L'aventure dort où vous décidez</title>
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Lambrequin décoratif créole — SVG à intégrer -->
+  <div class="lambrequin-top" aria-hidden="true">
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav" aria-label="Navigation principale">
+    <div class="nav__inner">
+      <a href="#accueil" class="nav__logo" aria-label="RoadTrip Réunion - Accueil">
+        <svg class="nav__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 20 Q16 8 24 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="16" cy="11" r="2" fill="currentColor"/>
+        </svg>
+        <span>RoadTrip <strong>Réunion</strong></span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#concept" class="nav__link">Le concept</a></li>
+        <li><a href="#vehicule" class="nav__link">Le véhicule</a></li>
+        <li><a href="#spots" class="nav__link">Spots</a></li>
+        <li><a href="#tarifs" class="nav__link">Formules</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn--primary btn--sm nav__cta">Réserver</a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile overlay -->
+  <div class="nav-menu" id="navMenu" aria-hidden="true" role="dialog" aria-label="Menu de navigation">
+    <ul class="nav-menu__links" role="list">
+      <li><a href="#concept" class="nav-menu__link" data-delay="0">Le concept</a></li>
+      <li><a href="#vehicule" class="nav-menu__link" data-delay="1">Le véhicule</a></li>
+      <li><a href="#spots" class="nav-menu__link" data-delay="2">Spots</a></li>
+      <li><a href="#tarifs" class="nav-menu__link" data-delay="3">Formules</a></li>
+      <li><a href="#faq" class="nav-menu__link" data-delay="4">FAQ</a></li>
+      <li><a href="#contact" class="nav-menu__link nav-menu__link--cta" data-delay="5">Réserver</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ========== HERO ========== -->
+  <!-- Remplacer l'image src par votre photo hero réelle (Duster + paysage réunionnais) -->
+  <section id="accueil" class="hero">
+    <div class="hero__pin">
+
+      <div class="hero__bg">
+        <img
+          src="public/images/hero.png"
+          alt="Paysage de La Réunion, vue depuis les hauteurs"
+          class="hero__img"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="eyebrow hero__eyebrow js-hero-el" data-threshold="0.1">Location 4x4 - La Réunion</div>
+        <h1 class="hero__title js-hero-el" data-threshold="0.28">
+          L'aventure dort<br>
+          <em>où vous décidez</em>
+        </h1>
+        <p class="hero__sub js-hero-el" data-threshold="0.48">
+          Un Duster équipé, une tente de toit, et La Réunion à explorer à votre rythme.
+        </p>
+        <div class="hero__ctas js-hero-el" data-threshold="0.66">
+          <a href="#contact" class="btn btn--primary btn--lg">
+            Réserver mon road trip
+            <span class="btn__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a href="#tarifs" class="btn btn--ghost btn--lg">Voir les formules</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== CONCEPT ========== -->
+  <section id="concept" class="concept section">
+    <div class="container">
+      <div class="concept__header reveal">
+        <h2 class="section-title">Pourquoi RoadTrip Réunion ?</h2>
+        <p class="section-sub">L'aventure sans compromis, en toute liberté.</p>
+      </div>
+
+      <div class="concept__list">
+
+        <article class="concept__item reveal">
+          <span class="concept__num" aria-hidden="true">01</span>
+          <div class="concept__body">
+            <h3 class="concept__title">Un 4x4 de confiance</h3>
+            <p class="concept__text">Le Dacia Duster Adventure, solide et polyvalent sur les routes, pistes et hauts plateaux de l'île. Fiable même là où les autres voitures s'arrêtent.</p>
+          </div>
+        </article>
+
+        <article class="concept__item reveal" style="--delay: 0.1s">
+          <span class="concept__num" aria-hidden="true">02</span>
+          <div class="concept__body">
+            <h3 class="concept__title">Une tente sur le toit</h3>
+            <p class="concept__text">Installez-vous en 2 minutes n'importe où. Dormez sous les étoiles au pied du Piton, face à l'océan, au coeur des forêts de cryptomérias. Votre hôtel, c'est vous qui l'emportez.</p>
+          </div>
+        </article>
+
+        <article class="concept__item reveal" style="--delay: 0.2s">
+          <span class="concept__num" aria-hidden="true">03</span>
+          <div class="concept__body">
+            <h3 class="concept__title">La liberté totale</h3>
+            <p class="concept__text">Pas d'hôtel à rejoindre, pas d'itinéraire imposé. Décidez chaque soir où vous vous arrêtez. Levez-vous au lever du soleil sur Bélouve, dormez face au Piton. C'est ça, le vrai road trip.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== MARQUEE ========== -->
+  <div class="marquee-strip" aria-hidden="true" role="presentation">
+    <div class="marquee__track">
+      <span class="marquee__item">Piton de la Fournaise</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Cirque de Mafate</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Plages de l'Ouest</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Forêt de Bélouve</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Route du Volcan</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Duster 4x4</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Liberté totale</span>
+      <span class="marquee__sep">·</span>
+      <!-- Duplicate pour boucle seamless -->
+      <span class="marquee__item">Piton de la Fournaise</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Cirque de Mafate</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Plages de l'Ouest</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Forêt de Bélouve</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Route du Volcan</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Duster 4x4</span>
+      <span class="marquee__sep">·</span>
+      <span class="marquee__item">Liberté totale</span>
+      <span class="marquee__sep">·</span>
+    </div>
+  </div>
+
+
+  <!-- ========== VEHICULE ========== -->
+  <!-- Remplacer l'image par une photo réelle du Duster équipé -->
+  <section id="vehicule" class="vehicule section">
+    <div class="container vehicule__grid">
+
+      <div class="vehicule__visual reveal">
+        <div class="vehicule__img-wrap">
+          <img
+            src="public/images/equipement.png"
+            alt="Dacia Duster équipé avec tente de toit sur une piste réunionnaise"
+            class="vehicule__img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="vehicule__content reveal" style="--delay: 0.15s">
+        <h2 class="section-title">Le Duster<br><em>tout équipé</em></h2>
+        <p class="vehicule__sub">Tout le matériel pour partir sereinement, sans rien oublier. Vérifiez, montez, roulez.</p>
+
+        <ul class="spec-list" role="list">
+          <li class="spec-list__item">
+            <svg class="spec-list__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Dacia Duster 4x4</strong>
+              <span>Diesel, transmission intégrale, idéal tout-terrain</span>
+            </div>
+          </li>
+          <li class="spec-list__item">
+            <svg class="spec-list__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Tente de toit Maggiolina Airland</strong>
+              <span>2 personnes, ouverture en 2 minutes</span>
+            </div>
+          </li>
+          <li class="spec-list__item">
+            <svg class="spec-list__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Literie complète</strong>
+              <span>Matelas mousse 5 cm + sacs de couchage inclus</span>
+            </div>
+          </li>
+          <li class="spec-list__item">
+            <svg class="spec-list__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Kit cuisine complet</strong>
+              <span>Glacière 35 L, réchaud 2 feux, vaisselle</span>
+            </div>
+          </li>
+          <li class="spec-list__item">
+            <svg class="spec-list__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Table + 2 chaises pliantes</strong>
+              <span>Pour diner face au coucher de soleil</span>
+            </div>
+          </li>
+          <li class="spec-list__item">
+            <svg class="spec-list__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Kilométrage illimité</strong>
+              <span>+ GPS intégré + carte spots recommandés</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== SPOTS ========== -->
+  <section id="spots" class="spots section">
+    <div class="container">
+      <div class="spots__header reveal">
+        <div class="eyebrow">Les incontournables</div>
+        <h2 class="section-title">Quatre spots,<br><em>mille aventures</em></h2>
+      </div>
+
+      <div class="spots__grid">
+
+        <!-- Spot 1 - large -->
+        <!-- Remplacer par une photo du Piton de la Fournaise -->
+        <article class="spot-card spot-card--large reveal">
+          <img
+            src="public/images/piton.webp"
+            alt="Piton de la Fournaise, volcan de La Réunion"
+            class="spot-card__img"
+            loading="lazy"
+          />
+          <div class="spot-card__content">
+            <h3 class="spot-card__title">Piton de la Fournaise</h3>
+            <p class="spot-card__text">Le volcan le plus actif du monde. Une route rouge à couper le souffle jusqu'au cratère Dolomieu, 2 632 m d'altitude.</p>
+          </div>
+        </article>
+
+        <!-- Spot 2 - small -->
+        <!-- Remplacer par une photo du Cirque de Mafate -->
+        <article class="spot-card reveal" style="--delay: 0.1s">
+          <img
+            src="https://picsum.photos/seed/cirque-mafate-valley/700/540"
+            alt="Cirque de Mafate vu depuis les hauteurs"
+            class="spot-card__img"
+            loading="lazy"
+          />
+          <div class="spot-card__content">
+            <h3 class="spot-card__title">Cirque de Mafate</h3>
+            <p class="spot-card__text">L'enclave sans route. Accédez aux hauteurs du Maïdo et contemplez ce paysage hors du monde.</p>
+          </div>
+        </article>
+
+        <!-- Spot 3 - small -->
+        <!-- Remplacer par une photo des plages de l'Ouest -->
+        <article class="spot-card reveal" style="--delay: 0.15s">
+          <img
+            src="https://picsum.photos/seed/tropical-beach-turquoise/700/540"
+            alt="Plage de l'Hermitage, côte ouest de La Réunion"
+            class="spot-card__img"
+            loading="lazy"
+          />
+          <div class="spot-card__content">
+            <h3 class="spot-card__title">Plages de l'Ouest</h3>
+            <p class="spot-card__text">Saint-Gilles, l'Hermitage, Grande Anse. L'eau turquoise et le lagon, après une journée de piste.</p>
+          </div>
+        </article>
+
+        <!-- Spot 4 - large -->
+        <!-- Remplacer par une photo de la Forêt de Bélouve -->
+        <article class="spot-card spot-card--large reveal" style="--delay: 0.2s">
+          <img
+            src="https://picsum.photos/seed/forest-fog-morning/900/640"
+            alt="Forêt de Bélouve, mer de nuages au lever du soleil"
+            class="spot-card__img"
+            loading="lazy"
+          />
+          <div class="spot-card__content">
+            <h3 class="spot-card__title">Forêt de Bélouve</h3>
+            <p class="spot-card__text">La mer de nuages au lever du soleil. Cryptomérias géants et pistes forestières secrètes, au coeur du Parc National.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== COMMENT CA MARCHE ========== -->
+  <section id="comment" class="steps section">
+    <div class="container">
+      <div class="steps__header reveal">
+        <h2 class="section-title">Simple<br><em>comme bonjour</em></h2>
+      </div>
+
+      <ol class="steps__list" role="list">
+
+        <li class="step reveal">
+          <div class="step__num" aria-hidden="true">1</div>
+          <div class="step__body">
+            <h3 class="step__title">Choisissez vos dates</h3>
+            <p class="step__text">Réservez en ligne ou par WhatsApp. On confirme la disponibilité sous 24h et on prépare votre devis personnalisé.</p>
+          </div>
+        </li>
+
+        <li class="step reveal" style="--delay: 0.1s">
+          <div class="step__num" aria-hidden="true">2</div>
+          <div class="step__body">
+            <h3 class="step__title">On prépare le Duster</h3>
+            <p class="step__text">Tente montée, glacière chargée, matériel vérifié et nettoyé. Le véhicule est prêt avant votre arrivée.</p>
+          </div>
+        </li>
+
+        <li class="step reveal" style="--delay: 0.2s">
+          <div class="step__num" aria-hidden="true">3</div>
+          <div class="step__body">
+            <h3 class="step__title">Récupérez le véhicule</h3>
+            <p class="step__text">À l'aéroport de Saint-Denis ou à notre agence. Briefing de 30 minutes : tente, matériel, spots recommandés.</p>
+          </div>
+        </li>
+
+        <li class="step reveal" style="--delay: 0.3s">
+          <div class="step__num" aria-hidden="true">4</div>
+          <div class="step__body">
+            <h3 class="step__title">Partez à l'aventure</h3>
+            <p class="step__text">Roulez, dormez où vous voulez, explorez. Rendez le véhicule en fin de séjour. On s'occupe du reste.</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ========== TARIFS ========== -->
+  <section id="tarifs" class="tarifs section">
+    <div class="container">
+      <div class="tarifs__header reveal">
+        <h2 class="section-title">Choisissez<br><em>votre formule</em></h2>
+        <p class="tarifs__sub">Tous les équipements sont inclus dans chaque formule. Aucune surprise.</p>
+      </div>
+
+      <div class="tarifs__grid">
+
+        <article class="tarif-card reveal">
+          <div class="tarif-card__label">Week-end</div>
+          <div class="tarif-card__duration">3 jours</div>
+          <div class="tarif-card__price">
+            <span class="tarif-card__from">à partir de</span>
+            <span class="tarif-card__amount">280 <span class="tarif-card__currency">€</span></span>
+          </div>
+          <p class="tarif-card__desc">L'escapade parfaite pour découvrir un cirque ou faire le tour du volcan.</p>
+          <ul class="tarif-card__includes" role="list">
+            <li>Duster 4x4 + tente de toit</li>
+            <li>Literie complète</li>
+            <li>Kit cuisine</li>
+            <li>Kilométrage illimité</li>
+            <li>Assurance tous risques</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--full">Choisir cette formule</a>
+        </article>
+
+        <article class="tarif-card tarif-card--featured reveal" style="--delay: 0.1s">
+          <div class="tarif-card__badge">Le plus choisi</div>
+          <div class="tarif-card__label">La Semaine</div>
+          <div class="tarif-card__duration">7 jours</div>
+          <div class="tarif-card__price">
+            <span class="tarif-card__from">à partir de</span>
+            <span class="tarif-card__amount">580 <span class="tarif-card__currency">€</span></span>
+          </div>
+          <p class="tarif-card__desc">Le temps de découvrir l'île en profondeur : volcan, cirques, plages, forêts.</p>
+          <ul class="tarif-card__includes" role="list">
+            <li>Duster 4x4 + tente de toit</li>
+            <li>Literie complète</li>
+            <li>Kit cuisine</li>
+            <li>Kilométrage illimité</li>
+            <li>Assurance tous risques</li>
+            <li>Assistance 24/7</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary--inv btn--full">Choisir cette formule</a>
+        </article>
+
+        <article class="tarif-card reveal" style="--delay: 0.2s">
+          <div class="tarif-card__label">Sur-mesure</div>
+          <div class="tarif-card__duration">10 jours et plus</div>
+          <div class="tarif-card__price">
+            <span class="tarif-card__from">tarif</span>
+            <span class="tarif-card__amount">Sur <span class="tarif-card__currency">devis</span></span>
+          </div>
+          <p class="tarif-card__desc">Pour les aventuriers qui veulent tout voir. Itinéraire, dates, budget : on s'adapte.</p>
+          <ul class="tarif-card__includes" role="list">
+            <li>Duster 4x4 + tente de toit</li>
+            <li>Literie complète</li>
+            <li>Kit cuisine</li>
+            <li>Kilométrage illimité</li>
+            <li>Assurance tous risques</li>
+            <li>Assistance 24/7</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--full">Nous contacter</a>
+        </article>
+
+      </div>
+
+      <div class="tarifs__note reveal">
+        <p>Tous les prix sont indiqués en euros TTC, pour 1 ou 2 personnes. Remise possible pour les séjours longue durée.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONFIANCE ========== -->
+  <section id="confiance" class="confiance section">
+    <div class="container confiance__grid">
+
+      <div class="confiance__inclus reveal">
+        <div class="eyebrow">Ce qui est inclus</div>
+        <h2 class="section-title">Tout ce qu'il faut.<br><em>Rien à ajouter.</em></h2>
+
+        <ul class="inclus-list" role="list">
+          <li class="inclus-list__item">
+            <svg class="inclus-list__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Assurance tous risques</strong> avec option rachat de franchise</span>
+          </li>
+          <li class="inclus-list__item">
+            <svg class="inclus-list__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7a16 16 0 006.88 6.88l.38-.38a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Assistance téléphonique 24/7</strong> pendant toute la durée du séjour</span>
+          </li>
+          <li class="inclus-list__item">
+            <svg class="inclus-list__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Tente de toit + literie complète</strong> matelas, sacs de couchage, oreillers</span>
+          </li>
+          <li class="inclus-list__item">
+            <svg class="inclus-list__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Kit cuisine complet</strong> glacière, réchaud, vaisselle, table + chaises</span>
+          </li>
+          <li class="inclus-list__item">
+            <svg class="inclus-list__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Kilométrage illimité</strong> à La Réunion, sans compteur</span>
+          </li>
+          <li class="inclus-list__item">
+            <svg class="inclus-list__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>Carte des spots recommandés</strong> + itinéraires conseillés par nos locaux</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="confiance__temoignages reveal" style="--delay: 0.15s">
+        <div class="eyebrow">Ils ont voyagé avec nous</div>
+
+        <blockquote class="temoignage">
+          <p class="temoignage__text">"Le meilleur choix pour découvrir La Réunion autrement. On a dormi face au volcan. C'était magique."</p>
+          <footer class="temoignage__footer">
+            <!-- Remplacer par une vraie photo du client -->
+            <img src="https://picsum.photos/seed/portrait-marie/80/80" alt="Marie L." class="temoignage__avatar" loading="lazy" />
+            <div>
+              <cite class="temoignage__name">Marie L.</cite>
+              <span class="temoignage__origin">Paris - Septembre 2024</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="temoignage">
+          <p class="temoignage__text">"Véhicule impeccable, tente facile à monter. La liberté de choisir son spot chaque soir, ça n'a pas de prix."</p>
+          <footer class="temoignage__footer">
+            <!-- Remplacer par une vraie photo du client -->
+            <img src="https://picsum.photos/seed/portrait-thomas/80/80" alt="Thomas R." class="temoignage__avatar" loading="lazy" />
+            <div>
+              <cite class="temoignage__name">Thomas R.</cite>
+              <span class="temoignage__origin">Lyon - Juillet 2024</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="temoignage">
+          <p class="temoignage__text">"On a passé 10 jours à sillonner l'île. Le Duster n'a jamais failli, même sur les pistes du Volcan."</p>
+          <footer class="temoignage__footer">
+            <!-- Remplacer par une vraie photo du client -->
+            <img src="https://picsum.photos/seed/portrait-camille/80/80" alt="Camille &amp; Julien" class="temoignage__avatar" loading="lazy" />
+            <div>
+              <cite class="temoignage__name">Camille & Julien</cite>
+              <span class="temoignage__origin">Bordeaux - Aout 2024</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="faq section">
+    <div class="container">
+      <div class="faq__header reveal">
+        <h2 class="section-title">Questions<br><em>fréquentes</em></h2>
+      </div>
+
+      <div class="faq__list" role="list">
+
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq1">
+            <span>Quel permis est nécessaire ?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq1" role="region">
+            <p>Le permis B valide depuis au moins 2 ans suffit. Les permis européens et internationaux sont acceptés. Pas besoin de permis 4x4 spécifique.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="--delay: 0.05s" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq2">
+            <span>L'assurance couvre quoi exactement ?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq2" role="region">
+            <p>Tous risques avec franchise de 500 €. Option rachat de franchise disponible à 10 €/jour pour une franchise à 0 €. Pas besoin de carte bancaire premium.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="--delay: 0.1s" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq3">
+            <span>Où peut-on dormir avec la tente de toit ?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq3" role="region">
+            <p>Aires de camping officielles et espaces camping-car autorisés. On remet à chaque location une carte avec plus de 30 spots sélectionnés par nos soins, dont plusieurs spots inoubliables accessibles uniquement en 4x4.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="--delay: 0.15s" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq4">
+            <span>Y a-t-il un kilométrage limité ?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq4" role="region">
+            <p>Non. Kilométrage totalement illimité dans toutes nos formules, valable à La Réunion uniquement. Roulez sans compter.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="--delay: 0.2s" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq5">
+            <span>Combien de temps pour monter la tente ?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq5" role="region">
+            <p>2 à 3 minutes pour la déplier, 5 minutes pour la replier et la ranger. On vous montre tout au briefing de départ. Apres une nuit, c'est automatique.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="--delay: 0.25s" role="listitem">
+          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq6">
+            <span>Peut-on partir avec des enfants ?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-item__answer" id="faq6" role="region">
+            <p>La tente de toit est conçue pour 2 adultes confortablement. Avec un enfant, c'est tout à fait possible. Contactez-nous pour qu'on adapte l'équipement à votre famille.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="contact section">
+    <div class="container contact__grid">
+
+      <div class="contact__intro reveal">
+        <h2 class="section-title">Prêt pour<br><em>l'aventure ?</em></h2>
+        <p class="contact__sub">Remplissez le formulaire ou écrivez-nous directement sur WhatsApp. On répond sous 24h.</p>
+
+        <a
+          href="https://wa.me/262XXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20road%20trip%20%C3%A0%20La%20R%C3%A9union."
+          class="btn btn--whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contacter RoadTrip Réunion sur WhatsApp"
+        >
+          <svg class="btn__icon--wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Écrire sur WhatsApp
+        </a>
+
+        <div class="contact__infos">
+          <p>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C6.686 2 4 4.686 4 8c0 4.418 6 10 6 10s6-5.582 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" stroke="currentColor" stroke-width="1.2"/></svg>
+            Saint-Denis, La Réunion
+          </p>
+          <p>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 0l8 6 8-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            contact@roadtripreunion.re
+          </p>
+        </div>
+      </div>
+
+      <div class="contact__form-wrap reveal" style="--delay: 0.15s">
+        <form class="contact-form" id="contactForm" novalidate aria-label="Formulaire de réservation">
+          <div class="form-field">
+            <label for="nom" class="form-label">Nom complet</label>
+            <input type="text" id="nom" name="nom" class="form-input" placeholder="Jean Dupont" required autocomplete="name" />
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="form-label">Adresse email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="jean@exemple.com" required autocomplete="email" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="date-debut" class="form-label">Date d'arrivée</label>
+              <input type="date" id="date-debut" name="date-debut" class="form-input" required />
+            </div>
+            <div class="form-field">
+              <label for="date-fin" class="form-label">Date de retour</label>
+              <input type="date" id="date-fin" name="date-fin" class="form-input" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="formule" class="form-label">Formule souhaitée</label>
+            <div class="form-select-wrap">
+              <select id="formule" name="formule" class="form-input form-select" required>
+                <option value="" disabled selected>Choisissez une formule</option>
+                <option value="weekend">Week-end (3 jours)</option>
+                <option value="semaine">La Semaine (7 jours)</option>
+                <option value="sur-mesure">Sur-mesure (10 jours et plus)</option>
+              </select>
+              <svg class="form-select-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message" class="form-label">Message <span class="form-label--opt">(facultatif)</span></label>
+            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Questions, demandes particulières..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full btn--lg form-submit">
+            Envoyer ma demande
+            <span class="btn__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+
+          <p class="form-note">Vos données ne sont jamais partagées. On vous répond sous 24h.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M14 24l8 8 12-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Demande envoyée !</h3>
+          <p>On revient vers vous dans les 24 heures. Bon road trip en perspective.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#accueil" class="footer__logo" aria-label="RoadTrip Réunion - Retour en haut">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5"/><path d="M8 20 Q16 8 24 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="16" cy="11" r="2" fill="currentColor"/></svg>
+          RoadTrip Réunion
+        </a>
+        <p class="footer__tagline">L'aventure dort où vous décidez.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Liens du pied de page">
+        <ul role="list">
+          <li><a href="#concept">Le concept</a></li>
+          <li><a href="#vehicule">Le véhicule</a></li>
+          <li><a href="#spots">Spots</a></li>
+          <li><a href="#tarifs">Formules</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__legal">
+        <p>© 2025 RoadTrip Réunion. Tous droits réservés.</p>
+        <div class="footer__legal-links">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">CGU</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

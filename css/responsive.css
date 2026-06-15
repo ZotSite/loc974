@@ -1,0 +1,352 @@
+/* =============================================
+   RoadTrip Réunion — Responsive (mobile-first)
+   Breakpoints : sm 640 / md 768 / lg 1024
+   ============================================= */
+
+/* ===== TABLETTE : <= 1024px ===== */
+@media (max-width: 1024px) {
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__cta {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  .vehicule__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .vehicule__visual {
+    order: -1;
+  }
+
+  .steps__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 3rem;
+  }
+
+  .steps__list::before {
+    display: none;
+  }
+
+  .tarifs__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .tarif-card--featured {
+    transform: scale(1);
+  }
+
+  .tarif-card--featured:hover {
+    transform: translateY(-4px);
+  }
+
+  .confiance__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .contact__intro {
+    max-width: 520px;
+  }
+
+  .spots__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .spot-card--large {
+    grid-column: span 2;
+    aspect-ratio: 16/8;
+  }
+
+  .spot-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .spot-card:nth-child(4) {
+    grid-column: 2;
+    grid-row: auto;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .footer__nav {
+    order: 3;
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .footer__legal {
+    text-align: left;
+  }
+}
+
+
+/* ===== MOBILE : <= 768px ===== */
+@media (max-width: 768px) {
+
+  :root {
+    --nav-h: 64px;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Nav */
+  .nav {
+    top: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  /* Hero */
+  .hero__content {
+    padding: 0 1.25rem;
+    padding-top: calc(var(--nav-h) + 5rem);
+    padding-bottom: 5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
+    max-width: 100%;
+  }
+
+  .hero__sub {
+    font-size: 1rem;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Concept */
+  .concept__item {
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .concept__num {
+    font-size: 2.2rem;
+  }
+
+  .concept__title {
+    font-size: 1.5rem;
+  }
+
+  .concept__item:hover {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  /* Vehicule */
+  .vehicule__img-wrap {
+    aspect-ratio: 16/10;
+  }
+
+  /* Spots */
+  .spots__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spot-card--large {
+    grid-column: 1;
+    aspect-ratio: 4/3;
+  }
+
+  .spot-card:nth-child(3) {
+    grid-column: 1;
+  }
+
+  .spot-card:nth-child(4) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .spot-card__title {
+    font-size: 1.3rem;
+  }
+
+  /* Steps */
+  .steps__list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Tarifs */
+  .tarifs__grid {
+    max-width: 100%;
+  }
+
+  /* Confiance */
+  .confiance__grid {
+    gap: 3rem;
+  }
+
+  /* Form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* FAQ */
+  .faq__list {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer__logo {
+    justify-content: center;
+  }
+
+  .footer__legal {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer__legal-links {
+    justify-content: center;
+  }
+
+  .footer__nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* ===== SMALL MOBILE : <= 480px ===== */
+@media (max-width: 480px) {
+
+  .nav__inner {
+    padding: 0.75rem 1rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .btn--lg {
+    font-size: 0.92rem;
+    padding: 0.85rem 1.6rem;
+  }
+
+  .tarif-card__amount {
+    font-size: 2.5rem;
+  }
+
+  .temoignage__text {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .spot-card:hover .spot-card__img,
+  .vehicule__img-wrap:hover .vehicule__img {
+    transform: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+
+  .btn--whatsapp:hover {
+    transform: none;
+  }
+
+  .tarif-card:hover {
+    transform: none;
+  }
+
+  .tarif-card--featured {
+    transform: none;
+  }
+
+  .scroll-line {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .faq-item__answer {
+    transition: none;
+  }
+
+  .nav-menu__link {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .burger__line {
+    transition: none;
+  }
+}
+
+
+/* ===== HOVER NONE (touch devices) ===== */
+@media (hover: none) {
+  .spot-card:hover .spot-card__img,
+  .vehicule__img-wrap:hover .vehicule__img {
+    transform: none;
+  }
+
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .tarif-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
