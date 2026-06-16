@@ -1610,3 +1610,18 @@ button {
 .footer__legal-links a:hover {
   color: var(--bg);
 }
+
+/* ===== VERSION BADGE ===== */
+#version-badge {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  z-index: 9999;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(30, 77, 53, 0.35);
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  user-select: none;
+}
