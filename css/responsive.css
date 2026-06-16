@@ -350,6 +350,21 @@
 }
 
 
+/* ===== LARGE DESKTOP : texte hero à droite ===== */
+@media (min-width: 1280px) {
+  .hero__content {
+    width: auto;
+    max-width: 520px;
+    margin-left: 58%;
+    margin-right: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: flex-end;
+    padding-bottom: 8rem;
+  }
+}
+
+
 /* ===== LANDSCAPE PHONE : paysage écran court ===== */
 @media (orientation: landscape) and (max-height: 500px) {
   .hero { height: 300vh; }

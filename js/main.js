@@ -15,6 +15,7 @@
   const heroImg1       = document.querySelector('.hero__img--1');
   const heroImg2       = document.querySelector('.hero__img--2');
   const heroImg3       = document.querySelector('.hero__img--3');
+  const heroImg4       = document.querySelector('.hero__img--4');
   const heroScrollHint = document.querySelector('.hero__scroll-hint');
   const heroEls        = document.querySelectorAll('.js-hero-el');
 
@@ -28,10 +29,11 @@
         const viewportH = window.innerHeight;
         const ratio     = Math.max(0, Math.min(1, scrollY / (heroH - viewportH)));
 
-        /* 4 images, 3 transitions d'1/3 chacune */
-        if (heroImg2) heroImg2.style.opacity = Math.max(0, 1 - ratio * 3).toFixed(3);
-        if (heroImg1) heroImg1.style.opacity = Math.max(0, 1 - (ratio - 1/3) * 3).toFixed(3);
-        if (heroImg3) heroImg3.style.opacity = Math.max(0, 1 - (ratio - 2/3) * 3).toFixed(3);
+        /* 5 images, 4 transitions d'1/4 chacune */
+        if (heroImg2) heroImg2.style.opacity = Math.max(0, 1 - ratio * 4).toFixed(3);
+        if (heroImg1) heroImg1.style.opacity = Math.max(0, 1 - (ratio - 1/4) * 4).toFixed(3);
+        if (heroImg3) heroImg3.style.opacity = Math.max(0, 1 - (ratio - 2/4) * 4).toFixed(3);
+        if (heroImg4) heroImg4.style.opacity = Math.max(0, 1 - (ratio - 3/4) * 4).toFixed(3);
 
         /* Révèle chaque élément selon son seuil */
         heroEls.forEach(el => {
@@ -55,6 +57,37 @@
       }, { passive: true });
 
       updateHero();
+
+      /* Cinématique d'intro : auto-scroll jusqu'à herob3, desktop uniquement */
+      const introTarget = heroSection.offsetHeight - window.innerHeight;
+      const introDuration = 3500;
+      let introStart = null;
+      let introBlocked = true;
+
+      const blockInput = (e) => { if (introBlocked) e.preventDefault(); };
+      window.addEventListener('wheel',      blockInput, { passive: false });
+      window.addEventListener('touchstart', blockInput, { passive: false });
+      window.addEventListener('keydown',    blockInput, { passive: false });
+
+      const runIntro = (ts) => {
+        if (!introStart) introStart = ts;
+        const progress = Math.min((ts - introStart) / introDuration, 1);
+        window.scrollTo(0, progress * introTarget);
+        if (progress < 1) {
+          requestAnimationFrame(runIntro);
+        } else {
+          document.documentElement.style.scrollBehavior = '';
+          introBlocked = false;
+          window.removeEventListener('wheel',      blockInput);
+          window.removeEventListener('touchstart', blockInput);
+          window.removeEventListener('keydown',    blockInput);
+        }
+      };
+
+      setTimeout(() => {
+        document.documentElement.style.scrollBehavior = 'auto';
+        requestAnimationFrame(runIntro);
+      }, 400);
 
     } else {
       /* Touch ou reduced-motion : tout révélé d'emblée, pas de parallax */

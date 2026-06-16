@@ -587,7 +587,8 @@ button {
 
 .hero__img--1,
 .hero__img--2,
-.hero__img--3 {
+.hero__img--3,
+.hero__img--4 {
   will-change: opacity;
 }
 
@@ -603,9 +604,13 @@ button {
 }
 
 .hero__eyebrow {
+  position: absolute;
+  top: calc(var(--nav-h) + 2rem);
+  left: 2rem;
+  z-index: 2;
   border-color: rgba(255, 255, 255, 0.35);
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .hero__title {
