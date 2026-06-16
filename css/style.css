@@ -393,6 +393,15 @@ button {
   flex-shrink: 0;
 }
 
+.nav__version {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  margin-left: 0.1rem;
+}
+
 /* Links */
 .nav__links {
   display: flex;
