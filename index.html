@@ -17,6 +17,8 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
   <div id="version-badge" aria-hidden="true">v1.0.0</div>
 
   <!-- Lambrequin décoratif créole — SVG à intégrer -->
@@ -39,6 +41,7 @@
         <li><a href="#concept" class="nav__link">Le concept</a></li>
         <li><a href="#vehicule" class="nav__link">Le véhicule</a></li>
         <li><a href="#spots" class="nav__link">Spots</a></li>
+        <li><a href="#comment" class="nav__link">Étapes</a></li>
         <li><a href="#tarifs" class="nav__link">Formules</a></li>
         <li><a href="#faq" class="nav__link">FAQ</a></li>
       </ul>
@@ -58,12 +61,15 @@
       <li><a href="#concept" class="nav-menu__link" data-delay="0">Le concept</a></li>
       <li><a href="#vehicule" class="nav-menu__link" data-delay="1">Le véhicule</a></li>
       <li><a href="#spots" class="nav-menu__link" data-delay="2">Spots</a></li>
-      <li><a href="#tarifs" class="nav-menu__link" data-delay="3">Formules</a></li>
-      <li><a href="#faq" class="nav-menu__link" data-delay="4">FAQ</a></li>
-      <li><a href="#contact" class="nav-menu__link nav-menu__link--cta" data-delay="5">Réserver</a></li>
+      <li><a href="#comment" class="nav-menu__link" data-delay="3">Comment ça marche</a></li>
+      <li><a href="#tarifs" class="nav-menu__link" data-delay="4">Formules</a></li>
+      <li><a href="#faq" class="nav-menu__link" data-delay="5">FAQ</a></li>
+      <li><a href="#contact" class="nav-menu__link nav-menu__link--cta" data-delay="6">Réserver</a></li>
     </ul>
   </div>
 
+
+  <main id="main-content" tabindex="-1">
 
   <!-- ========== HERO ========== -->
   <!-- Remplacer l'image src par votre photo hero réelle (Duster + paysage réunionnais) -->
@@ -148,7 +154,7 @@
           <span class="concept__num" aria-hidden="true">02</span>
           <div class="concept__body">
             <h3 class="concept__title">Une tente de toit haut de gamme</h3>
-            <p class="concept__text">La Maggiolina Airsky 360 blanche s'ouvre en 2 minutes. Sous les étoiles au pied du Piton, face à l'océan ou au cœur des forêts de cryptomérias. En cas de pluie tropicale, le vestaire Wing s'installe en quelques secondes pour un abri complet.</p>
+            <p class="concept__text">La Maggiolina Airsky 360 blanche s'ouvre en 2 minutes. Sous les étoiles au pied du Piton, face à l'océan ou au cœur des forêts de cryptomérias. En cas de pluie tropicale, l'auvent Wing s'installe en quelques secondes pour un abri complet.</p>
           </div>
         </article>
 
@@ -212,6 +218,7 @@
             src="public/images/equipement.png"
             alt="Dacia Duster équipé avec tente de toit sur une piste réunionnaise"
             class="vehicule__img"
+            width="800" height="600"
             loading="lazy"
           />
         </div>
@@ -288,6 +295,7 @@
             src="public/images/piton.webp"
             alt="Piton de la Fournaise, volcan de La Réunion"
             class="spot-card__img"
+            width="900" height="562"
             loading="lazy"
           />
           <div class="spot-card__content">
@@ -302,6 +310,7 @@
             src="public/images/vue.png"
             alt="Vue imprenable sur le Cirque de Mafate depuis les hauteurs de La Réunion"
             class="spot-card__img"
+            width="640" height="480"
             loading="lazy"
           />
           <div class="spot-card__content">
@@ -316,6 +325,7 @@
             src="public/images/duster maido.png"
             alt="Vue panoramique depuis le Maïdo, Duster au premier plan"
             class="spot-card__img"
+            width="640" height="480"
             loading="lazy"
           />
           <div class="spot-card__content">
@@ -331,6 +341,7 @@
             src="https://picsum.photos/seed/forest-fog-morning/900/640"
             alt="Forêt de Bélouve, mer de nuages au lever du soleil"
             class="spot-card__img"
+            width="900" height="640"
             loading="lazy"
           />
           <div class="spot-card__content">
@@ -509,7 +520,7 @@
           <p class="temoignage__text">"Le meilleur choix pour découvrir La Réunion autrement. On a dormi face au volcan. C'était magique."</p>
           <footer class="temoignage__footer">
             <!-- Remplacer par une vraie photo du client -->
-            <img src="https://picsum.photos/seed/portrait-marie/80/80" alt="Marie L." class="temoignage__avatar" loading="lazy" />
+            <img src="https://picsum.photos/seed/portrait-marie/80/80" alt="Marie L." class="temoignage__avatar" width="80" height="80" loading="lazy" />
             <div>
               <cite class="temoignage__name">Marie L.</cite>
               <span class="temoignage__origin">Paris - Septembre 2024</span>
@@ -521,7 +532,7 @@
           <p class="temoignage__text">"Véhicule impeccable, tente facile à monter. La liberté de choisir son spot chaque soir, ça n'a pas de prix."</p>
           <footer class="temoignage__footer">
             <!-- Remplacer par une vraie photo du client -->
-            <img src="https://picsum.photos/seed/portrait-thomas/80/80" alt="Thomas R." class="temoignage__avatar" loading="lazy" />
+            <img src="https://picsum.photos/seed/portrait-thomas/80/80" alt="Thomas R." class="temoignage__avatar" width="80" height="80" loading="lazy" />
             <div>
               <cite class="temoignage__name">Thomas R.</cite>
               <span class="temoignage__origin">Lyon - Juillet 2024</span>
@@ -533,7 +544,7 @@
           <p class="temoignage__text">"On a passé 10 jours à sillonner l'île. Le Duster n'a jamais failli, même sur les pistes du Volcan."</p>
           <footer class="temoignage__footer">
             <!-- Remplacer par une vraie photo du client -->
-            <img src="https://picsum.photos/seed/portrait-camille/80/80" alt="Camille &amp; Julien" class="temoignage__avatar" loading="lazy" />
+            <img src="https://picsum.photos/seed/portrait-camille/80/80" alt="Camille &amp; Julien" class="temoignage__avatar" width="80" height="80" loading="lazy" />
             <div>
               <cite class="temoignage__name">Camille & Julien</cite>
               <span class="temoignage__origin">Bordeaux - Aout 2024</span>
@@ -556,61 +567,61 @@
       <div class="faq__list" role="list">
 
         <div class="faq-item reveal" role="listitem">
-          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq1">
+          <button class="faq-item__trigger" id="faqBtn1" aria-expanded="false" aria-controls="faq1">
             <span>Quel permis est nécessaire ?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faq-item__answer" id="faq1" role="region">
+          <div class="faq-item__answer" id="faq1" role="region" aria-labelledby="faqBtn1">
             <p>Le permis B valide depuis au moins 2 ans suffit. Les permis européens et internationaux sont acceptés. Pas besoin de permis 4x4 spécifique.</p>
           </div>
         </div>
 
         <div class="faq-item reveal" style="--delay: 0.05s" role="listitem">
-          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq2">
+          <button class="faq-item__trigger" id="faqBtn2" aria-expanded="false" aria-controls="faq2">
             <span>L'assurance couvre quoi exactement ?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faq-item__answer" id="faq2" role="region">
+          <div class="faq-item__answer" id="faq2" role="region" aria-labelledby="faqBtn2">
             <p>Tous risques avec franchise de 500 €. Option rachat de franchise disponible à 10 €/jour pour une franchise à 0 €. Pas besoin de carte bancaire premium.</p>
           </div>
         </div>
 
         <div class="faq-item reveal" style="--delay: 0.1s" role="listitem">
-          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq3">
+          <button class="faq-item__trigger" id="faqBtn3" aria-expanded="false" aria-controls="faq3">
             <span>Où peut-on dormir avec la tente de toit ?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faq-item__answer" id="faq3" role="region">
+          <div class="faq-item__answer" id="faq3" role="region" aria-labelledby="faqBtn3">
             <p>Aires de camping officielles et espaces camping-car autorisés. On remet à chaque location une carte avec plus de 30 spots sélectionnés par nos soins, dont des emplacements inoubliables accessibles en SUV.</p>
           </div>
         </div>
 
         <div class="faq-item reveal" style="--delay: 0.15s" role="listitem">
-          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq4">
+          <button class="faq-item__trigger" id="faqBtn4" aria-expanded="false" aria-controls="faq4">
             <span>Y a-t-il un kilométrage limité ?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faq-item__answer" id="faq4" role="region">
+          <div class="faq-item__answer" id="faq4" role="region" aria-labelledby="faqBtn4">
             <p>Non. Kilométrage totalement illimité dans toutes nos formules, valable à La Réunion uniquement. Roulez sans compter.</p>
           </div>
         </div>
 
         <div class="faq-item reveal" style="--delay: 0.2s" role="listitem">
-          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq5">
+          <button class="faq-item__trigger" id="faqBtn5" aria-expanded="false" aria-controls="faq5">
             <span>Combien de temps pour monter la tente ?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faq-item__answer" id="faq5" role="region">
-            <p>2 à 3 minutes pour la déplier, 5 minutes pour la replier et la ranger. On vous montre tout au briefing de départ. Apres une nuit, c'est automatique.</p>
+          <div class="faq-item__answer" id="faq5" role="region" aria-labelledby="faqBtn5">
+            <p>2 à 3 minutes pour la déplier, 5 minutes pour la replier et la ranger. On vous montre tout au briefing de départ. Après une nuit, c'est automatique.</p>
           </div>
         </div>
 
         <div class="faq-item reveal" style="--delay: 0.25s" role="listitem">
-          <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq6">
+          <button class="faq-item__trigger" id="faqBtn6" aria-expanded="false" aria-controls="faq6">
             <span>Peut-on partir avec des enfants ?</span>
             <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="faq-item__answer" id="faq6" role="region">
+          <div class="faq-item__answer" id="faq6" role="region" aria-labelledby="faqBtn6">
             <p>La tente de toit est conçue pour 2 adultes confortablement. Avec un enfant, c'est tout à fait possible. Contactez-nous pour qu'on adapte l'équipement à votre famille.</p>
           </div>
         </div>
@@ -654,30 +665,34 @@
       <div class="contact__form-wrap reveal" style="--delay: 0.15s">
         <form class="contact-form" id="contactForm" novalidate aria-label="Formulaire de réservation">
           <div class="form-field">
-            <label for="nom" class="form-label">Nom complet</label>
-            <input type="text" id="nom" name="nom" class="form-input" placeholder="Jean Dupont" required autocomplete="name" />
+            <label for="nom" class="form-label">Nom complet <span class="form-required" aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" class="form-input" placeholder="Jean Dupont" required autocomplete="name" aria-describedby="nom-error" />
+            <span class="form-error" id="nom-error" role="alert" hidden></span>
           </div>
 
           <div class="form-field">
-            <label for="email" class="form-label">Adresse email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="jean@exemple.com" required autocomplete="email" />
+            <label for="email" class="form-label">Adresse email <span class="form-required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="jean@exemple.com" required autocomplete="email" aria-describedby="email-error" />
+            <span class="form-error" id="email-error" role="alert" hidden></span>
           </div>
 
           <div class="form-row">
             <div class="form-field">
-              <label for="date-debut" class="form-label">Date d'arrivée</label>
-              <input type="date" id="date-debut" name="date-debut" class="form-input" required />
+              <label for="date-debut" class="form-label">Date d'arrivée <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="date" id="date-debut" name="date-debut" class="form-input" required aria-describedby="date-debut-error" />
+              <span class="form-error" id="date-debut-error" role="alert" hidden></span>
             </div>
             <div class="form-field">
-              <label for="date-fin" class="form-label">Date de retour</label>
-              <input type="date" id="date-fin" name="date-fin" class="form-input" required />
+              <label for="date-fin" class="form-label">Date de retour <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="date" id="date-fin" name="date-fin" class="form-input" required aria-describedby="date-fin-error" />
+              <span class="form-error" id="date-fin-error" role="alert" hidden></span>
             </div>
           </div>
 
           <div class="form-field">
-            <label for="formule" class="form-label">Formule souhaitée</label>
+            <label for="formule" class="form-label">Formule souhaitée <span class="form-required" aria-hidden="true">*</span></label>
             <div class="form-select-wrap">
-              <select id="formule" name="formule" class="form-input form-select" required>
+              <select id="formule" name="formule" class="form-input form-select" required aria-describedby="formule-error">
                 <option value="" disabled selected>Choisissez une formule</option>
                 <option value="weekend">Week-end (3 jours)</option>
                 <option value="semaine">La Semaine (7 jours)</option>
@@ -685,6 +700,7 @@
               </select>
               <svg class="form-select-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <span class="form-error" id="formule-error" role="alert" hidden></span>
           </div>
 
           <div class="form-field">
@@ -712,6 +728,8 @@
     </div>
   </section>
 
+
+  </main><!-- /#main-content -->
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer" role="contentinfo">

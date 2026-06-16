@@ -3,6 +3,47 @@
    Breakpoints : sm 640 / md 768 / lg 1024
    ============================================= */
 
+/* ===== XL : >= 1440px ===== */
+@media (min-width: 1440px) {
+  .container { max-width: 1360px; }
+  .section { padding: 10rem 0; }
+  .hero__title { font-size: 5.5rem; }
+}
+
+
+/* ===== TABLETTE UNIQUEMENT : 769–1024px ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tarifs : 2 colonnes (featured sur 2 cols) */
+  .tarifs__grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .tarif-card--featured {
+    grid-column: span 2;
+  }
+
+  /* Spots : proportions ajustées */
+  .spot-card { aspect-ratio: 3/2; }
+  .spot-card--large { aspect-ratio: 16/7; }
+
+  /* Steps : numéros légèrement réduits */
+  .step__num {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer : brand gauche / legal droite */
+  .footer__legal {
+    text-align: right;
+  }
+  .footer__legal-links {
+    justify-content: flex-end;
+  }
+}
+
+
 /* ===== TABLETTE : <= 1024px ===== */
 @media (max-width: 1024px) {
 
@@ -116,12 +157,19 @@
     padding: 0 1.25rem;
   }
 
+  /* Hero height réduite sur mobile */
+  .hero { height: 240vh; }
+
   /* Nav */
   .nav {
-    top: 0.75rem;
+    top: calc(0.75rem + env(safe-area-inset-top, 0px));
     left: 0.75rem;
     right: 0.75rem;
   }
+
+  /* Lignes de lecture : 35-60 chars */
+  .section-sub  { max-width: 46ch; }
+  .hero__sub    { max-width: 38ch; }
 
   /* Hero */
   .hero__content {
@@ -166,9 +214,8 @@
 
   .concept__item:hover {
     background: none;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   /* Vehicule */
@@ -255,6 +302,12 @@
 /* ===== SMALL MOBILE : <= 480px ===== */
 @media (max-width: 480px) {
 
+  /* Hero encore plus courte sur petits écrans */
+  .hero { height: 200vh; }
+
+  /* Scroll hint inutile sur mobile */
+  .hero__scroll-hint { display: none; }
+
   .nav__inner {
     padding: 0.75rem 1rem;
   }
@@ -279,13 +332,51 @@
   .temoignage__text {
     font-size: 1rem;
   }
+
+  /* Marquee plus petit */
+  .marquee__item { font-size: 1.1rem; }
+}
+
+
+/* ===== XS : <= 375px ===== */
+@media (max-width: 375px) {
+  .container { padding: 0 1rem; }
+  .hero__title { font-size: clamp(1.8rem, 10vw, 2.4rem); }
+  .hero__ctas { gap: 0.75rem; }
+  .nav__inner { padding: 0.65rem 0.85rem; }
+  .btn--lg { padding: 0.8rem 1.4rem; }
+  .step__num { width: 40px; height: 40px; }
+  .concept__num { font-size: 1.8rem; }
+}
+
+
+/* ===== LANDSCAPE PHONE : paysage écran court ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero { height: 300vh; }
+  .hero__content {
+    padding-top: calc(var(--nav-h) + 1.5rem);
+    padding-bottom: 2rem;
+  }
+  .hero__title { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+  .hero__sub { font-size: 0.95rem; }
+  .hero__ctas .btn--lg { padding: 0.7rem 1.4rem; font-size: 0.9rem; }
 }
 
 
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 
+  html {
+    scroll-behavior: auto;
+  }
+
   .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .js-hero-el {
     opacity: 1;
     transform: none;
     transition: none;
@@ -330,6 +421,12 @@
   .burger__line {
     transition: none;
   }
+}
+
+
+/* ===== TOUCH : hero en plein écran (parallax désactivé) ===== */
+@media (pointer: coarse) {
+  .hero { height: 100vh; }
 }
 
 
